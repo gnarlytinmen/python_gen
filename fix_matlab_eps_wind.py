@@ -17,10 +17,10 @@ def main(): # standard function definition
     ret = subprocess.call(theCommand, shell=True)
 
     if len(sys.argv) < 3: # if length of argument passed from command line is less than 3 items
-        print 'Usage: python fix_matlab_eps_wind.py input-file output-file'
+        print('Usage: python fix_matlab_eps_wind.py input-file output-file')
 
     if ret: # if ret variable is true or == 1 (i.e. process hasnt terminated and inkscape is still running) throw error
-        print 'Error: You need Inkscape to convert images to a parsable format'
+        print('Error: You need Inkscape to convert images to a parsable format')
         return
 
     tmp = os.path.join(tempfile.gettempdir(), 'fix_matlab_eps.eps') # concat temporary directory path (C:\Users\tyler\AppData\Local\Temp\) and temp filename ('fix_matlab...')
